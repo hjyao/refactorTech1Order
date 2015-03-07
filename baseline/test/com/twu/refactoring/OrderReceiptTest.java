@@ -21,13 +21,13 @@ public class OrderReceiptTest {
 
     @Test
     public void shouldPrintLineItemAndSalesTaxInformation() {
-        ArrayList<Item> lineItems = new ArrayList<Item>() {{
+        ArrayList<Item> items = new ArrayList<Item>() {{
             add(new Item("milk", 10.0, 2));
             add(new Item("biscuits", 5.0, 5));
             add(new Item("chocolate", 20.0, 1));
         }};
         Order order = new Order(null, null, .10);
-        order.add(lineItems);
+        order.add(items);
 
         String output = order.printReceipt();
 
